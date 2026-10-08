@@ -182,10 +182,43 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /* ==========================================================================
-   4. MANIPULAÇÃO DO ENVIO DO FORMULÁRIO
+   4. ENVIO DO FORMULÁRIO PARA O SERVIDOR (PHP + MySQL)
    ========================================================================== */
-function handleFormSubmit(event) {
+
+// Endereço do PHP. Se o site e o PHP estiverem na mesma hospedagem, deixe assim.
+// Se o site ficar no GitHub Pages e o PHP em outra hospedagem, use o endereço completo,
+// ex.: 'https://seudominio.com.br/api/agendar.php'
+const URL_API_AGENDAMENTO = 'api/agendar.php';
+
+let enviandoAgendamento = false;
+
+// Mensagem de erro visível acima do botão de envio
+function mostrarErroEnvio(texto) {
+    const form = document.getElementById('formAgendamento');
+    if (!form) return;
+
+    let erro = document.getElementById('erro-envio-agendamento');
+    if (!erro) {
+        erro = document.createElement('p');
+        erro.id = 'erro-envio-agendamento';
+        erro.setAttribute('role', 'alert');
+        erro.style.cssText = 'display:none;color:#dc2626;font-size:14px;font-weight:600;line-height:1.4;margin:0 0 12px;text-align:center;';
+        const botaoContainer = form.querySelector('.form-submit-container');
+        if (botaoContainer) {
+            botaoContainer.insertAdjacentElement('beforebegin', erro);
+        } else {
+            form.appendChild(erro);
+        }
+    }
+
+    erro.textContent = texto || '';
+    erro.style.display = texto ? 'block' : 'none';
+}
+
+async function handleFormSubmit(event) {
     event.preventDefault();
+
+    if (enviandoAgendamento) return;
 
     const form = event.target;
     const dataInput = document.getElementById('data-visita');
@@ -218,14 +251,44 @@ function handleFormSubmit(event) {
     }
 
     const feedbackMessage = document.getElementById('feedbackMessage');
+    const botaoEnviar = form.querySelector('button[type="submit"]');
 
-    if (feedbackMessage) {
-        feedbackMessage.classList.add('active');
+    enviandoAgendamento = true;
+    if (botaoEnviar) botaoEnviar.disabled = true;
+    mostrarErroEnvio('');
+
+    try {
+        const resposta = await fetch(URL_API_AGENDAMENTO, {
+            method: 'POST',
+            headers: { 'Accept': 'application/json' },
+            body: new FormData(form)
+        });
+
+        let dados = null;
+        try {
+            dados = await resposta.json();
+        } catch (erroLeitura) {
+            dados = null;
+        }
+
+        if (!resposta.ok || !dados || !dados.sucesso) {
+            mostrarErroEnvio((dados && dados.mensagem) || 'Não foi possível enviar sua solicitação. Tente novamente em instantes.');
+            return;
+        }
+
+        if (feedbackMessage) {
+            feedbackMessage.classList.add('active');
+            setTimeout(() => {
+                feedbackMessage.classList.remove('active');
+            }, 5000);
+        }
+
         form.reset();
         atualizarAgendamento();
-
-        setTimeout(() => {
-            feedbackMessage.classList.remove('active');
-        }, 5000);
+    } catch (erroRede) {
+        mostrarErroEnvio('Falha de conexão. Verifique sua internet e tente novamente.');
+    } finally {
+        enviandoAgendamento = false;
+        if (botaoEnviar) botaoEnviar.disabled = false;
     }
 }
