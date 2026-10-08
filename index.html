@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colégio Estadual Mendes Gonçalves</title>
+    <link rel="stylesheet" href="main/main-css/style.css">
+    <link rel="icon" type="image/x-icon" href="main/main-img/logo-colegio-mendes.png">
+    <meta name="description" content="Página oficial do Colégio Estadual Mendes Gonçalves em Guaíra-PR.">
+</head>
+
+<body>
+    <!----------------HEADER---------------->
+    <header>
+        <div class="header-container">
+            <div class="header-brand">
+                <div class="header-img">
+                    <img src="main/main-img/logo-colegio-mendes.png" alt="Logo do Colégio Estadual Mendes Gonçalves">
+                </div>
+                <div class="header-text-group">
+                    <span class="first-name">COLÉGIO ESTADUAL</span>
+                    <strong class="second-name">MENDES GONÇALVES</strong>
+                </div>
+            </div>
+
+            <button type="button" class="menu-toggle" id="menuToggle" aria-label="Abrir menu"
+                aria-expanded="false" aria-controls="headerMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <div class="header-menu" id="headerMenu">
+                <nav class="nav-menu" aria-label="Navegação principal">
+                    <ul>
+                        <li><a href="#home" class="nav-link">Início</a></li>
+                        <li><a href="#historia" class="nav-link">Sobre</a></li>
+                        <li><a href="#cursos" class="nav-link">Cursos</a></li>
+                        <li><a href="#blog" class="nav-link">Blog</a></li>
+                        <li><a href="#galeria" class="nav-link">Galeria</a></li>
+                        <li><a href="#localizacao" class="nav-link">Localização</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <a href="#agendamento" class="btn-visita">Agende sua Visita</a>
+
+                    <div class="dropdown-menu">
+                        <button type="button" class="btn-portal" id="btn-portal" aria-expanded="false"
+                            aria-controls="dropdown-portal">
+                            <span>Portal</span>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2.5" aria-hidden="true">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                        <div class="dropdown-content" id="dropdown-portal" rel="noopener noreferrer">
+                            <a href="https://www.areadoaluno.seed.pr.gov.br/servicosaoaluno/pages/publico/login.jsf" target="_blank" rel="noopener noreferrer">Área
+                                dos Pais</a>
+                            <a href="https://www.areadoaluno.seed.pr.gov.br/servicosaoaluno/pages/publico/login.jsf" target="_blank" rel="noopener noreferrer">Área do
+                                Aluno</a>
+                            <a href="https://professor.escoladigital.pr.gov.br/rco_mais_aulas" target="_blank" rel="noopener noreferrer">Área do Professor</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <!----------------HOME---------------->
+        <section class="home" id="home">
+            <div class="home-container">
+                <div class="home-img">
+                    <img src="main/main-img/frente-colegio.jpeg" alt="Instalações do Colégio Mendes Gonçalves"
+                        class="home-hero-img">
+                </div>
+                <div class="home-content">
+                    <h1 class="home-title">Construindo o futuro através da educação de excelência</h1>
+                    <p class="home-description">
+                        O Colégio Estadual Mendes Gonçalves combina quase um século de tradição pedagógica com a
+                        modernidade dos cursos técnicos em Administração e Desenvolvimento de Sistemas, preparando os
+                        estudantes de Guaíra para os desafios do mercado e da vida.
+                    </p>
+                </div>
+                <div class="home-actions">
+                    <a href="#cursos" class="btn-primary">Explorar Cursos
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </a>
+                    <a href="#agendamento" class="btn-secondary">Agendar Visita</a>
+                </div>
+            </div>
+        </section>
+        <!----------------SOBRE---------------->
+        <section class="historia" id="historia">
+            <div class="historia-container">
+                <div class="historia-high">
+                    <div class="historia-left">
+                        <div class="historia-img">
+                            <img src="main/main-img/patio-colegio.jpg" alt="História do Colégio Estadual Mendes Gonçalves">
+                        </div>
+                        <div class="hino-box">
+                            <audio id="audioPage" controls preload="none"
+                                aria-label="Hino do Colégio Estadual Mendes Gonçalves">
+                                <source src="main/main-song/hinomendes.mpeg" type="audio/mpeg">
+                                Seu navegador não suporta o elemento de áudio.
+                            </audio>
+                        </div>
+                    </div>
+                    <div class="historia-right">
+                        <div class="historia-title">
+                            <h2>Sobre o Colégio</h2>
+                        </div>
+                        <div class="historia-description">
+                            <p>
+                                O Colégio Estadual Mendes Gonçalves, localizado em Guaíra–PR, foi fundado em 1928 e
+                                oficialmente estabelecido em 1952, sendo o primeiro da cidade. Inicialmente chamado de
+                                Grupo Escolar Mendes Gonçalves até 1976, a escola expandiu suas atividades na década de
+                                1990 para incluir Ensino Fundamental, Médio e Educação Profissional. Desde 2002, oferece
+                                cursos técnicos em Administração e Desenvolvimento de Sistemas,
+                                este último implantado em 2022 e reconhecido oficialmente em 2025. Em 2024, passou a
+                                oferecer Ensino Fundamental em Tempo Integral.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="historia-low">
+                    <div class="mvv-wrapper">
+                        <button type="button" class="carrossel-btn prev" id="btnPrev" aria-label="Slide anterior">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                                aria-hidden="true">
+                                <polyline points="15 18 9 12 15 6"></polyline>
+                            </svg>
+                        </button>
+
+                        <div class="mvv-cards-container" id="mvvContainer">
+                            <article class="mvv-card">
+                                <div class="card-img">
+                                    <img src="main/main-img/missao.png" alt="Missão da escola">
+                                </div>
+                                <div class="card-content">
+                                    <h3>Missão</h3>
+                                    <p>Formar estudantes preparados para os desafios acadêmicos e profissionais,
+                                        desenvolvendo competências técnicas e humanísticas.</p>
+                                </div>
+                            </article>
+
+                            <article class="mvv-card">
+                                <div class="card-img">
+                                    <img src="main/main-img/visao.png" alt="Visão da escola">
+                                </div>
+                                <div class="card-content">
+                                    <h3>Visão</h3>
+                                    <p>Ser referência em educação e inovação tecnológica em Guaíra-PR, reconhecida pela
+                                        excelência acadêmica e formação de profissionais competentes.</p>
+                                </div>
+                            </article>
+
+                            <article class="mvv-card">
+                                <div class="card-img">
+                                    <img src="main/main-img/objetivo.png" alt="Valores da escola">
+                                </div>
+                                <div class="card-content">
+                                    <h3>Valores</h3>
+                                    <p>Ética, inovação, responsabilidade social, desenvolvimento humano e excelência em
+                                        tudo que fazemos.</p>
+                                </div>
+                            </article>
+                        </div>
+
+                        <button type="button" class="carrossel-btn next" id="btnNext" aria-label="Próximo slide">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                                aria-hidden="true">
+                                <polyline points="9 18 15 12 9 6"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!----------------CURSOS---------------->
+        <section class="cursos" id="cursos">
+            <div class="cursos-container">
+                <div class="timeline-header">
+                    <h2>Nossos Cursos</h2>
+                    <p>Conheça a trajetória de ensino e qualificação do Colégio Estadual Mendes Gonçalves</p>
+                </div>
+
+                <ol class="timeline-line">
+                    <li class="timeline-item">
+                        <div class="timeline-node" aria-hidden="true">
+                            <span>01</span>
+                        </div>
+                        <div class="timeline-card" id="cursointegral">
+                            <div class="card-img">
+                                <img src="main/main-img/curso-parana-integral.png" alt="Ensino Fundamental Integral">
+                            </div>
+                            <div class="card-body">
+                                <h3>Ensino Fundamental Integral</h3>
+                                <p>Do 6º ao 9º ano, promove a formação integral ampliando conhecimentos acadêmicos,
+                                    sociais e emocionais. Estimula a autonomia e o pensamento crítico.</p>
+                                <div class="card-pills">
+                                    <span>6º ao 9º Ano</span>
+                                    <span>Tempo Integral</span>
+                                </div>
+                                <a href="matriz/matriz-fundamental.html" class="btn-saiba-mais">Matriz de Ensino</a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="timeline-item">
+                        <div class="timeline-node " aria-hidden="true">
+                            <span>02</span>
+                        </div>
+                        <div class="timeline-card" id="cursomedio">
+                            <div class="card-img">
+                                <img src="main/main-img/curso-medio-regular.png" alt="Ensino Médio Regular">
+                            </div>
+                            <div class="card-body">
+                                <h3>Ensino Médio Regular</h3>
+                                <p>Consolida e aprofunda os conhecimentos da Educação Básica. Prepara os estudantes para
+                                    vestibulares, continuidade acadêmica e atuação profissional.</p>
+                                <div class="card-pills">
+                                    <span>1º ao 3º Ano</span>
+                                    <span>Meio Período</span>
+                                </div>
+                                <a href="matriz/matriz-medio-regular.html" class="btn-saiba-mais">Matriz de Ensino</a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="timeline-item">
+                        <div class="timeline-node" aria-hidden="true">
+                            <span>03</span>
+                        </div>
+                        <div class="timeline-card" id="cursoadm">
+                            <div class="card-img">
+                                <img src="main/main-img/curso-administracao.png" alt="Técnico em Administração">
+                            </div>
+                            <div class="card-body">
+                                <h3>Técnico em Administração</h3>
+                                <p>Integra a formação média ao aprendizado prático em Gestão, Planejamento, Finanças,
+                                    Empreendedorismo e RH. Desenvolve liderança e visão de mercado.</p>
+                                <div class="card-pills">
+                                    <span>1º ao 3º Ano</span>
+                                    <span>Ensino Médio Técnico</span>
+                                </div>
+                                <a href="matriz/matriz-administracao.html" class="btn-saiba-mais">Matriz de Ensino</a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="timeline-item">
+                        <div class="timeline-node" aria-hidden="true">
+                            <span>04</span>
+                        </div>
+                        <div class="timeline-card" id="cursotec">
+                            <div class="card-img">
+                                <img src="main/main-img/curso-desenvolvimento-sistemas.png" alt="Técnico em Desenvolvimento de Sistemas">
+                            </div>
+                            <div class="card-body">
+                                <h3>Técnico em Desenvolvimento de Sistemas</h3>
+                                <p>União entre o ensino médio e a tecnologia. Abrange Lógica de Programação,
+                                    Desenvolvimento de Software, Banco de Dados e Inovação Digital.</p>
+                                <div class="card-pills">
+                                    <span>1º ao 3º Ano</span>
+                                    <span>Ensino Médio Técnico</span>
+                                </div>
+                                <a href="matriz/matriz-desenvolvimento-sistemas.html" class="btn-saiba-mais">Matriz de Ensino</a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="timeline-item">
+                        <div class="timeline-node" aria-hidden="true">
+                            <span>05</span>
+                        </div>
+                        <div class="timeline-card" id="cursorobotica">
+                            <div class="card-img">
+                                <img src="main/main-img/curso-robotica.png" alt="Robótica">
+                            </div>
+                            <div class="card-body">
+                                <h3>Robótica</h3>
+                                <p>União entre o ensino médio e a tecnologia. Abrange Lógica de Programação,
+                                    Desenvolvimento de Software, Banco de Dados e Inovação Digital.</p>
+                                <div class="card-pills">
+                                    <span>Contraturno</span>
+                                    <span>Exclusivo para alunos Mendes</span>
+                                </div>
+                                <a href="https://aluno.escoladigital.pr.gov.br/robotica" class="btn-saiba-mais" target="_blank" rel="noopener noreferrer">Saiba mais</a>
+                            </div>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+        </section>
+        <!----------------ESTATISTICA---------------->
+        <section class="estatistica">
+            <div class="stats-container">
+                <div class="stats-header">
+                    <h2>Nossos Números</h2>
+                    <p>Resultados que refletem nossa dedicação à comunidade escolar.</p>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stats-card">
+                        <div class="stat-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                        </div>
+                        <div class="stats-info">
+                            <h3>+550</h3>
+                            <p>Alunos Matriculados</p>
+                        </div>
+                    </div>
+
+                    <div class="stats-card">
+                        <div class="stat-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                                <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                            </svg>
+                        </div>
+                        <div class="stats-info">
+                            <h3>52</h3>
+                            <p>Professores Qualificados</p>
+                        </div>
+                    </div>
+
+                    <div class="stats-card">
+                        <div class="stat-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M16 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="10" cy="7" r="4"></circle>
+                                <path d="M20 8v6"></path>
+                                <path d="M23 11h-6"></path>
+                            </svg>
+                        </div>
+                        <div class="stats-info">
+                            <h3>+22</h3>
+                            <p>Funcionários</p>
+                        </div>
+                    </div>
+
+                    <div class="stats-card">
+                        <div class="stat-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
+                            </svg>
+                        </div>
+                        <div class="stats-info">
+                            <h3>+21.700</h3>
+                            <p>Passaram pelo colégio</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!----------------BLOG---------------->
+        <section class="blog-news" id="blog">
+            <div class="blog-header">
+                <h2>
+                    Nosso Blog & Notícias
+                    <span class="underline"></span>
+                </h2>
+                <p>Fique por dentro das últimas atividades, eventos e conquistas da nossa comunidade.</p>
+            </div>
+
+            <div class="blog-carousel-container">
+                <button class="nav-btn prev-btn" id="blogPrev" aria-label="Notícia anterior">&lsaquo;</button>
+
+                <div class="blog-viewport">
+                    <div class="blog-cards" id="blogTrack">
+                        <article class="blog-card">
+                            <div class="card-image-wrapper">
+                                <span class="badge">NOTÍCIAS</span>
+                                <img src="main/main-img/latinoware-2025.jpeg" alt="Latinoware 2026">
+                            </div>
+                            <div class="card-content">
+                                <h3>Latinoware</h3>
+                                <p>Mais uma excursão com os alunos do 2º e 3º ano dos cursos de Administração e
+                                    Desenvolvimento de Sistemas em Foz do Iguaçu.</p>
+                                <a href="blog-post/post-latinoware/latinoware.html" class="read-more"
+                                    aria-label="Saiba mais sobre Latinoware 2026">Saiba Mais &rarr;</a>
+                            </div>
+                            <div class="card-footer">
+                                <time datetime="2026-09-10">10/09/2026</time>
+                            </div>
+                        </article>
+
+                        <article class="blog-card">
+                            <div class="card-image-wrapper">
+                                <span class="badge">NOTÍCIAS</span>
+                                <img src="main/main-img/fatech.png" alt="Fatech">
+                            </div>
+                            <div class="card-content">
+                                <h3>Fatech</h3>
+                                <p>Alunos do 1º ao 3º ano dos cursos técnicos em Desenvolvimento
+                                    e Administração apresentam projetos inovadores, demonstrando criatividade e
+                                    conhecimento.</p>
+                                <a href="https://fatechmendes.com" class="read-more" target="_blank" rel="noopener noreferrer"
+                                    aria-label="Saiba mais sobre Fatech">Saiba Mais &rarr;</a>
+                            </div>
+                            <div class="card-footer">
+                                <time datetime="2025-10-08">08/10/2025</time>
+                            </div>
+                        </article>
+
+                        <article class="blog-card">
+                            <div class="card-image-wrapper">
+                                <span class="badge">NOTÍCIAS</span>
+                                <img src="main/main-img/impressora.jpg" alt="Impressão 3D">
+                            </div>
+                            <div class="card-content">
+                                <h3>Impressão 3D</h3>
+                                <p>O projeto está na nossa feira Fatech, na sala 12, onde a equipe apresenta a impressora e vende peças fabricadas.</p>
+                                <a href="blog-post/post-impressora-3d/impressora-3d.html" class="read-more"
+                                    aria-label="Saiba mais sobre Impressão 3D">Saiba Mais &rarr;</a>
+                            </div>
+                            <div class="card-footer">
+                                <time datetime="2026-10-08">09/10/2026</time>
+                            </div>
+                        </article>
+                        <article class="blog-card">
+                            <div class="card-image-wrapper">
+                                <span class="badge">NOTÍCIAS</span>
+                                <img src="main/main-img/escolares.jfif" alt="Jogos Escolares">
+                            </div>
+                            <div class="card-content">
+                                <h3>Escolares</h3>
+                                <p>O Colégio Mendes está a todo vapor participando dos Jogos Escolares.</p>
+                                <a href="blog-post/post-escolares/escolares.html" class="read-more"
+                                    aria-label="Saiba mais sobre Jogos Escolares">Saiba Mais &rarr;</a>
+                            </div>
+                            <div class="card-footer">
+                                <time datetime="2026-06-05">05/06/2026</time>
+                            </div>
+                        </article>                 
+                    </div>
+                </div>
+
+                <button class="nav-btn next-btn" id="blogNext" aria-label="Próxima notícia">&rsaquo;</button>
+            </div>
+
+            <div class="galeria-contador blog-contador">
+                <span id="blogAtual">1</span> / <span id="blogTotal">4</span>
+            </div>
+
+            <div class="blog-actions">
+                <a href="saiba-mais/mais-blog/mais-blog.html" class="btn-ver-todos">Ver Todas as Publicações</a>
+            </div>
+        </section>
+
+        <!----------------GALERIA---------------->
+
+        <section class="galeria-news" id="galeria">
+            <div class="galeria-header">
+                <h2>
+                    Nossa Galeria
+                    <span class="underline"></span>
+                </h2>
+                <p>Confira os registros e momentos marcantes da nossa comunidade.</p>
+            </div>
+
+            <div class="galeria-carousel-container">
+                <button class="nav-btn prev-btn" id="galeriaPrev" aria-label="Imagem anterior">&lsaquo;</button>
+                <div class="galeria-viewport">
+                    <div class="galeria-cards" id="galeriaTrack">
+
+                        <figure class="galeria-card">
+                            <img src="main/main-img/competicao.jpg" alt="Estudantes competindo na robótica">
+                            <figcaption class="galeria-card-overlay">
+                                <h3 class="galeria-card-title">Competição de Robótica</h3>
+                                <span class="galeria-card-action">Clique para visualizar</span>
+                            </figcaption>
+                        </figure>
+
+                        <figure class="galeria-card">
+                            <img src="main/main-img/alunosdestaque.jpeg" alt="Alunos destaques">
+                            <figcaption class="galeria-card-overlay">
+                                <h3 class="galeria-card-title">Alunos Destaques</h3>
+                                <span class="galeria-card-action">Clique para visualizar</span>
+                            </figcaption>
+                        </figure>
+                        <figure class="galeria-card">
+                            <img src="main/main-img/escolares.jfif" alt="Jogos Escolares">
+                            <figcaption class="galeria-card-overlay">
+                                <h3 class="galeria-card-title">Jogos Escolares</h3>
+                                <span class="galeria-card-action">Clique para visualizar</span>
+                            </figcaption>
+                        </figure>
+                        <figure class="galeria-card">
+                            <img src="main/main-img/viagem-foz.jpg" alt="Viagem para Foz do iguaçu">
+                            <figcaption class="galeria-card-overlay">
+                                <h3 class="galeria-card-title">Viagem para Foz do Iguaçu</h3>
+                                <span class="galeria-card-action">Clique para visualizar</span>
+                            </figcaption>
+                        </figure>
+                        <figure class="galeria-card">
+                            <img src="main/main-img/uems.jpg" alt="Visita Na E.U.M.S">
+                            <figcaption class="galeria-card-overlay">
+                                <h3 class="galeria-card-title">Visita Na E.U.M.S</h3>
+                                <span class="galeria-card-action">Clique para visualizar</span>
+                            </figcaption>
+                        </figure>
+                        <figure class="galeria-card">
+                            <img src="main/main-img/cachorro-robo.jpeg" alt="Estudantes na Biblioteca Central">
+                            <figcaption class="galeria-card-overlay">
+                                <h3 class="galeria-card-title">Cachorro Robo</h3>
+                                <span class="galeria-card-action">Clique para visualizar</span>
+                            </figcaption>
+                        </figure>
+
+                    </div>
+                </div>
+
+                <button class="nav-btn next-btn" id="galeriaNext" aria-label="Próxima imagem">&rsaquo;</button>
+            </div>
+
+            <div class="galeria-contador">
+                <span id="galeriaAtual">1</span> / <span id="galeriaTotal">3</span>
+            </div>
+
+            <div class="galeria-actions">
+                <a href="saiba-mais/mais-galeria/galeria.html" class="btn-ver-todos">Ver Galeria Completa</a>
+            </div>
+        </section>
+
+        <!----------------AGENDAMENTO---------------->
+
+        <section class="agendamento" id="agendamento">
+            <div class="agendamento-container">
+                <div class="agendamento-header">
+                    <h2>Agende uma Visita</h2>
+                    <div class="underline"></div>
+                    <p>Escolha o melhor dia e horário para conhecer nossa estrutura e proposta pedagógica.</p>
+                </div>
+
+                <form id="formAgendamento" class="form-card" onsubmit="handleFormSubmit(event)">
+                    <fieldset class="form-section">
+                        <legend>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                aria-hidden="true" focusable="false">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="12" cy="7" r="4"></circle>
+                            </svg>
+                            Dados de Contato
+                        </legend>
+                        <div class="form-grid">
+                            <div class="form-group full-width">
+                                <label for="nome-responsavel">Nome Completo</label>
+                                <input type="text" id="nome-responsavel" name="nome_responsavel" autocomplete="name"
+                                    placeholder="Digite seu nome completo" required />
+                            </div>
+                            <div class="form-group">
+                                <label for="telefone">Telefone / WhatsApp</label>
+                                <input type="tel" id="telefone" name="telefone" autocomplete="tel"
+                                    placeholder="(00) 00000-0000" required />
+                            </div>
+                            <div class="form-group">
+                                <label for="email">E-mail</label>
+                                <input type="email" id="email" name="email" autocomplete="email"
+                                    placeholder="seu@email.com" required />
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="form-section">
+                        <legend>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                                <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                            </svg>
+                            Interesse Pedagógico
+                        </legend>
+                        <div class="form-group">
+                            <label for="segmento">Nível de Ensino de Interesse</label>
+                            <div class="select-wrapper">
+                                <select id="segmento" name="segmento" required>
+                                    <option value="" disabled selected>Selecione a modalidade...</option>
+                                    <option value="fundamental-2">Ensino Fundamental II (6º ao 9º ano)</option>
+                                    <option value="medio-regular">Ensino Médio Regular</option>
+                                    <option value="medio-adm">Ensino Médio Técnico em Administração</option>
+                                    <option value="medio-ads">Ensino Médio Técnico em Desenvolvimento de Sistemas
+                                    </option>
+                                </select>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="form-section">
+                        <legend>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                <line x1="16" y1="2" x2="16" y2="6"></line>
+                                <line x1="8" y1="2" x2="8" y2="6"></line>
+                                <line x1="3" y1="10" x2="21" y2="10"></line>
+                            </svg>
+                            Data e Horário
+                        </legend>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="data-visita">Data Pretendida</label>
+                                <input type="date" id="data-visita" name="data_visita" required />
+                            </div>
+                            <div class="form-group">
+                                <label for="periodo">Horário de Preferência</label>
+                                <div class="select-wrapper">
+                                    <select id="periodo" name="periodo" required>
+                                        <option value="" disabled selected>Selecione um horário...</option>
+
+                                        <optgroup label="Manhã">
+                                            <option value="08:00">08:00</option>
+                                            <option value="09:00">09:00</option>
+                                            <option value="10:00">10:00</option>
+                                            <option value="11:00">11:00</option>
+                                        </optgroup>
+
+                                        <optgroup label="Tarde">
+                                            <option value="13:00">13:00</option>
+                                            <option value="14:00">14:00</option>
+                                            <option value="15:00">15:00</option>
+                                            <option value="16:00">16:00</option>
+                                            <option value="17:00">17:00</option>
+                                        </optgroup>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="form-section">
+                        <legend>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                            </svg>
+                            Observações
+                        </legend>
+                        <div class="form-group">
+                            <label for="mensagem">Mensagem ou Dúvida (opcional)</label>
+                            <textarea id="mensagem" name="mensagem" rows="3"
+                                placeholder="Como podemos ajudar você?"></textarea>
+                        </div>
+                    </fieldset>
+
+                    <div class="form-submit-container">
+                        <button type="submit" class="btn-primary btn-submit">
+                            Solicitar Agendamento
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="feedback-message" id="feedbackMessage" role="status" aria-live="polite">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                        </svg>
+                        <span>Solicitação enviada com sucesso! Nossa equipe entrará em contato em breve.</span>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!----------------LOCALIZAÇÃO---------------->
+        <section class="localizacao" id="localizacao">
+            <div class="localizacao-container">
+                <div class="localizacao-header">
+                    <h2>Nossa Localização</h2>
+                    <div class="underline"></div>
+                    <p>Venha nos visitar e conhecer de perto nossa infraestrutura.</p>
+                </div>
+
+                <div class="localizacao-card">
+                    <!-- Informações de Contato / Endereço -->
+                    <div class="localizacao-info">
+                        <h3>Colégio Estadual Mendes Gonçalves</h3>
+
+                        <div class="info-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            <div>
+                                <strong>Endereço</strong>
+                                <p>R. Francisco Murtinho, 656 - Centro</p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                            <div>
+                                <strong>Horário de Atendimento</strong>
+                                <p>Segunda a Sexta: 08:00 - 17:30</p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path
+                                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                                </path>
+                            </svg>
+                            <div>
+                                <strong>Telefone</strong>
+                                <p>+55 (44) 99176-8356</p>
+                            </div>
+                        </div>
+
+                        <a href="https://maps.google.com/?q=Colégio+Estadual+Mendes+Gonçalves+Guaíra" target="_blank" rel="noopener noreferrer""
+                            class="btn-primary btn-rota">
+                            Como Chegar
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                <polyline points="15 3 21 3 21 9"></polyline>
+                                <line x1="10" y1="14" x2="21" y2="3"></line>
+                            </svg>
+                        </a>
+                    </div>
+
+                    <div class="mapa-wrapper">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1884.4825520557997!2d-54.25727887920722!3d-24.081111826812435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94f4afe15add33d9%3A0xa25fb2b34a4627af!2sCol%C3%A9gio%20Estadual%20Mendes%20Gon%C3%A7alves!5e1!3m2!1spt-BR!2sbr!4v1790905890946!5m2!1spt-BR!2sbr"
+                            title="Mapa de localização do Colégio Estadual Mendes Gonçalves" width="100%" height="100%"
+                            style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="strict-origin-when-cross-origin">
+                        </iframe>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="main/main-js/blog.js"></script>
+    <script src="main/main-js/galeria.js"></script>
+    <script src="main/main-js/header-dropdown.js"></script>
+    <script src="main/main-js/javascript/menu-hamburguer.js"></script>
+    <script src="main/main-js/hino-volume.js"></script>
+    <script src="main/main-js/menu-hamburguer.js"></script>
+    <script src="main/main-js/mvv-carrossel.js"></script>
+    <script src="main/main-js/visita.js"></script>
+
+
+    <div id="galeria-modal" class="galeria-modal">
+        <div class="galeria-modal-wrapper">
+            <span class="galeria-modal-close">&times;</span>
+            <div class="galeria-modal-container">
+                <img class="galeria-modal-content" id="galeria-modal-img" alt="Imagem ampliada">
+                <div id="galeria-modal-caption" class="galeria-modal-caption"></div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer-site">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col footer-brand-col">
+                    <div class="footer-brand">
+                        <div class="header-logo-badge">
+                            <img src="main/main-img/logo-colegio-mendes.png" alt="Logo Colégio Mendes Gonçalves">
+                        </div>
+                        <div class="text-group">
+                            <span class="brand-title">COLÉGIO ESTADUAL</span>
+                            <span class="brand-subtitle">MENDES GONÇALVES</span>
+                        </div>
+                    </div>
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com/colegioestadualmendesgoncalves/?locale=pt_BR"
+                            aria-label="Facebook" class="social-icon" target="_blank" rel="noopener noreferrer">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                            </svg>
+                        </a>
+                        <a href="https://www.instagram.com/col.mendes/" aria-label="Instagram" class="social-icon"
+                            target="_blank" rel="noopener noreferrer">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                        </a>
+                        <a href="https://wa.me/5544991768356" aria-label="WhatsApp" class="social-icon" target="_blank" rel="noopener noreferrer">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z">
+                                </path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h3 class="footer-heading">Navegação</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Início</a></li>
+                        <li><a href="#historia">Sobre o Colégio</a></li>
+                        <li><a href="#cursos">Nossos Cursos</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="#galeria">Galeria</a></li>
+                        <li><a href="#agendamento">Agende uma Visita</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3 class="footer-heading">Níveis de Ensino</h3>
+                    <ul class="footer-links">
+                        <li><a href="#cursointegral">Fundamental Integral</a></li>
+                        <li><a href="#cursomedio">Ensino Médio Regular</a></li>
+                        <li><a href="#cursoadm">Técnico em Administração</a></li>
+                        <li><a href="#cursotec">Técnico em Desenvolvimento de Sistemas</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3 class="footer-heading">Atendimento</h3>
+                    <ul class="footer-contact-info">
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            <span>R. Francisco Murtinho, 656 - Centro</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path
+                                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                                </path>
+                            </svg>
+                            <span>+55 (44) 99176-8356</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                </path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                            <span>mendes.goncalves@escola.pr.gov.br</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
